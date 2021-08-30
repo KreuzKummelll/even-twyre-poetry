@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-top: 20%;
+}
+
+h2 {
+    padding-left: 8px;
+}
+
+footer {
+    text-align: center;
+}
+
+#content {
+    background-color: antiquewhite;
+    padding: 8px, auto, 8px, auto;
+    
+}
+
+#content p {
+    color: rgb(206, 64, 64);
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#content .poem_container {
+    padding: 30px;
+}

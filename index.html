@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Even Twyre Poetry</title>
+    <link href="style.css" type="text/css" rel="stylesheet"></link>
+</head>
+
+<body>
+    <h1>Even Twyre Poetry</h1>
+    <h2>Poems</h2>
+    <div id="content"></div>
+</body>
+<footer><p>&copy;Even Twyre 2021</p></footer>
+<script> 
+const api_url = "https://kreuzkummelll.github.io/smalli.world.earthbound-release/EarthboundRelease_Poems.json"
+
+// async function buildTableOfContents() {
+//     const response = await fetch(api_url);
+//     const data = await response.json();
+//     var tableOfContents = "";
+//     for (var i = 0; i < data.length; i++) {
+//         const {title} = data[i];
+//         tableOfContents += "<div class ='table_of_contents'";
+//         tableOfContents += "<h4"
+//         tableOfContents += 
+//     }
+// }
+
+async function getPoemsForBody() {
+    const response = await fetch(api_url);
+    const data = await response.json();
+    var poemContainerString = "";
+    for (var i = 0; i < data.length; i++) {
+        const { title, text } = data[i];
+        poemContainerString += "<div class='poem_container'>";
+        poemContainerString += "<h3"
+        poemContainerString += " id=\"poem_title\">";
+        poemContainerString += title;
+        poemContainerString += "</h3>";
+        poemContainerString += "<p>";
+        poemContainerString += text;
+        poemContainerString += "</p>";
+        poemContainerString += "</div>                                                                                         "
+    }
+    console.log(poemContainerString);
+
+    document.getElementById('content').innerHTML = poemContainerString;
+}
+
+getPoemsForBody();
+
+</script>
+</html>
